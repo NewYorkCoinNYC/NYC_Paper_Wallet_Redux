@@ -1,0 +1,420 @@
+@import url('fonts.css');
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    50% {
+        background: #fff;
+    }
+}
+
+html,
+body {
+    font-family: "Amiko";
+    background-color: #FFFFFF;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    z-index: 100;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.header-title {
+    font-weight: bold;
+    line-height: 50px;
+    display: inline-block;
+    margin: 20px 0 20px 20px;
+    font-size: 15px;
+}
+
+.header-logo {
+    height: 50px;
+    margin: 20px 0;
+    display: inline-block;
+
+}
+
+.info {
+    background-color: #3F70B5;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 300;
+    /*width: 100%;*/
+    /*margin: 0 auto;*/
+    /*position: relative;*/
+    z-index: 100;
+}
+
+.info h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.info .inner {
+    width: 60%;
+    padding: 20px;
+    line-height: 1.6;
+    float: none;
+    margin: 0 auto;
+}
+
+.btn-main {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255,1);
+    padding: 0.8em 1em;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none !important;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.btn-alternate {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: 1px solid #3178E2;
+    padding: 0.8em 1em;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none !important;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.btn-print {
+    background: transparent;
+    color: #3178E2;
+    border: 1px solid #3178E2;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+}
+
+.normal-height {
+    line-height: 0;
+}
+
+.terms {
+    font-size: 10px;
+}
+
+#print,
+#reset {
+    display: none;
+}
+
+/* ported from old main.css */
+
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1001;
+    width: 400px;
+    height: 150px;
+    border: 1px solid #3F70B5;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    background-color: #3F70B5;
+}
+
+#loader img {
+    vertical-align: bottom;
+    position: relative;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+#loader h3 {
+    margin-top: 20px;
+    text-align: center;
+    color: #FFF;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.65);
+    z-index: 1000;
+    display: none;
+}
+
+#overlay-sub {
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.wallet-container {
+    margin: 0 auto;
+    width: 1024px;
+    display: none;
+    padding-bottom: 40px;
+}
+
+/* random terrible css */
+
+.paper-wallet {
+    width: 1024px;
+    position: relative;
+    font-size: 10px;
+    color: #FFF;
+    margin: 15px 0;
+}
+
+.paper-wallet img {
+    vertical-align: baseline;
+}
+
+.paper-background,
+.paper-backside
+{
+    width: 1024px;
+}
+
+.pubkey-string {
+    font-family: "Amiko";
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 43px;
+    left: 26px;
+    width: 280px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.pubkey-string-invert {
+    font-family: "Amiko";
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    bottom: 48px;
+    left: 26px;
+    width: 280px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+.pubkey-qr {
+    position: absolute;
+    top: 101px;
+    left: 69px;
+}
+
+.privkey-string {
+    font-family: "Amiko";
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 60px;
+    right: 18px;
+    width: 441px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.privkey-string-invert {
+    font-family: "Amiko";
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    bottom: 64px;
+    right: 18px;
+    width: 441px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+
+.privkey-qr {
+    position: absolute;
+    top: 101px;
+    right: 49px;
+}
+
+.terms {
+    font-size: 10px;
+}
+
+.info:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.layout-center {
+    width: 60%;
+    padding: 50px 20%;
+    line-height: 1.6;
+    float: none;
+}
+
+#status {
+    display: none;
+}
+
+.input-large {
+    width: 520px !important;
+}
+
+.loading {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 0.25rem solid rgba(255, 255, 255, 0.2);
+    border-top-color: #fff;
+    animation: spin 1s infinite linear;
+}
+
+.loading--double {
+    border-style: double;
+    border-width: 0.5rem;
+}
+
+#overlay-text {
+    font-family: "Amiko";
+    font-weight: bold;
+}
+
+.loadercontent {
+    font-family: "Amiko";
+}
+
+#decrypt-tab-btn:hover {
+    background: #fff;
+    color: #000
+}
+
+#genny {
+    padding-bottom: 0px!important;
+}
+
+.btn-print:hover {
+    background: #3178E2;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-alternate:hover {
+    background-color: #fff;
+    color: #000;
+}
+#generate-tab-btn:hover {
+    background-color: #fff;
+    color: #000
+}
+
+
+
+#decrypt-tab-0 {
+    margin-top: 20px
+}
+
+#guide {
+    padding-bottom: 20px
+}
+
+
+
+#plain-text-0 {
+    padding: 15px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+#plain-text-1 {
+    padding: 15px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+#plain-text-2 {
+    padding: 15px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+#plain-text-3 {
+    padding: 15px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+
+
+
+
+#decrypt_password {
+    width: 30%
+}
+
+#encrypted {
+    width: 40%
+}
+
+#decrypt {
+    width: 13%
+}
+
+#reset_decrypt {
+    width: 13%
+}
+
+
+
+#password {
+    width: 35%
+}
+
+#decrypt-tab-1 {
+    margin-top: 20px
+}
+
+#decrypt-tab-2 {
+    margin-top: 20px
+}
+
+#decrypt-tab-3 {
+    margin-top: 20px
+}

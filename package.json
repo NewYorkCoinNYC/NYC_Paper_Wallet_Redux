@@ -1,0 +1,33 @@
+{
+  "name": "nyc-paper-wallet-redux",
+  "version": "1.4.0",
+  "description": "A paper wallet generator with BIP38 password encryption for NYC.",
+  "main": "main.js",
+  "build": {
+    "appId": "net.newyorkcoin.paperwallet",
+    "mac": {
+      "category": "finance"
+    }
+  },
+  "repository": "https://github.com/NewYorkCoinNYC/NYC_Paper_Wallet_Redux",
+  "keywords": [
+    "NewYorkCoin",
+    "NYCOIN",
+    "Paper Wallet",
+    "Cryptocurrency",
+    "Bitcoin"
+  ],
+  "author": "CryptoLover705",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "aes": "^0.1.0",
+    "bip38": "https://github.com/craigmacgregor/bip38/tarball/8e11c7da1d4df8a80b5aa32ed1457e474d911f20",
+    "browserify": "^16.2.3",
+    "coinkey": "^3.0.0",
+    "electron": "^3.0.7",
+    "electron-packager": "^12.2.0",
+    "qrcode-generator": "^1.4.1",
+    "secure-random": "^1.1.1",
+    "wif": "^2.0.6"
+  }
+}
