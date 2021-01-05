@@ -19,7 +19,10 @@ npm start
 
 ```bash
 
+# Install the dependencies
 npm install
+# Install electron-packeger 
+npm install -g electron-packager
 
 electron-packager . NYC_Paper_Wallet_Redux --overwrite --platform=darwin --arch=x64 --icon=build/icon.icns --prune=true --out=release-builds
 
