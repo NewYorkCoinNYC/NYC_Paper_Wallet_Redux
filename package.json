@@ -4,7 +4,7 @@
   "description": "A paper wallet generator with BIP38 password encryption for NYC.",
   "main": "main.js",
   "build": {
-    "appId": "net.newyorkcoin.paperwallet",
+    "appId": "xyz.newyorkcoin.address",
     "mac": {
       "category": "finance"
     }
