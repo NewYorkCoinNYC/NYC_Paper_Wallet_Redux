@@ -76,8 +76,8 @@
                 return
             }
             var version = {
-                private: 0x1C,
-                public: 0x35
+                private: 0xbc,
+                public: 0x3c
             }
             var bytes = secureRandom.randomBuffer(32)
             var key = new CoinKey(bytes, version)
@@ -221,8 +221,8 @@
 
         function decrypt() {
             var version = {
-                private: 0xd4,
-                public: 0x55
+                private: 0xbc,
+                public: 0x3c
             }
             var password = document.getElementById("decrypt_password").value;
             var encryptedKey = document.getElementById("encrypted").value;
