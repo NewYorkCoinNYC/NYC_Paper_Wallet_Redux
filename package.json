@@ -24,7 +24,7 @@
     "bip38": "https://github.com/craigmacgregor/bip38/tarball/8e11c7da1d4df8a80b5aa32ed1457e474d911f20",
     "browserify": "^16.2.3",
     "coinkey": "^3.0.0",
-    "electron": "^3.0.7",
+    "electron": "^7.2.4",
     "electron-packager": "^12.2.0",
     "qrcode-generator": "^1.4.1",
     "secure-random": "^1.1.1",
