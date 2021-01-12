@@ -21,6 +21,8 @@ npm start
 
 npm install
 
+npm install -g electron-packager
+
 electron-packager . NYC_Paper_Wallet_Redux --overwrite --platform=darwin --arch=x64 --icon=build/icon.icns --prune=true --out=release-builds
 
 electron-packager . NYC_Paper_Wallet_Redux --overwrite --asar=true --platform=linux --arch=ia32 --icon=build/android-icon-192x192.png --prune=true --out=release-builds
