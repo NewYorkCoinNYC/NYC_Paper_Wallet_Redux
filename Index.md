@@ -42,7 +42,7 @@
                 <div class="col-md-8 offset-2 text-center py-5">
                     <h2>What you need to know</h2>
                     <p>
-                        None of the generated keys are ever broadcast over the internet. It is recommended that you run it locally on your computer instead of generating the keys directly on the site. For the extra paranoid; you can run the generator and print the wallets using a secure offline environment and correctly wipe the environment and printer memory after use.
+                        None of the generated keys are ever broadcast over the internet. It is recommended that you run it locally on your computer instead of generating the keys directly on the site. For additional security; you can run the generator and print the wallets using a secure offline environment and correctly wipe the environment and printer memory after use.
                     </p>
 
                     <div class="py-1">
