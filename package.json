@@ -26,7 +26,7 @@
     "coinkey": "^3.0.0",
     "decompress-zip": ">=0.3.2",
     "electron": "^11.5.0",
-    "electron-packager": "^12.2.0",
+    "electron-packager": "^16.0.0",
     "minimist": ">=1.2.3",
     "qrcode-generator": "^1.4.1",
     "secure-random": "^1.1.1",
